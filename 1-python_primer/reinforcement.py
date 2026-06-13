@@ -58,6 +58,9 @@ def sum_of_squares_odd(n):
 
 # R-1.7 Give a single command that computes the sum from Exercise R-1.6, rely-
 # ing on Python’s comprehension syntax and the built-in sum function.
+def sum_of_squares_odd2(n):
+    if n > 0:
+        return sum([k*k for k in range(n) if k % 2 != 0])
 
 # R-1.8 Python allows negative integers to be used as indices into a sequence,
 # such as a string. If string s has length n, and expression s[k] is used for in-
