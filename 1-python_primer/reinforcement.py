@@ -1,3 +1,5 @@
+import random
+
 # R-1.1 Write a short Python function, is multiple(n, m), that takes two integer
 # values and returns True if n is a multiple of m, that is, n = mi for some
 # integer i, and False otherwise
@@ -88,3 +90,11 @@ range(8, -9, -2)
 # the built-in range function, that return a random choice from the given
 # range. Using only the randrange function, implement your own version
 # of the choice function.
+def choice(data):
+    if not isinstance(data, (list, str, tuple, set)):
+        raise ValueError("Enter a valid sequence")
+    elif not data:
+        raise ValueError("Enter a non empty sequence")
+    
+    random_index = random.randrange(len(data))
+    return data[random_index]
