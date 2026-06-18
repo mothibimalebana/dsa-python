@@ -2,6 +2,15 @@
 
 # P-1.29 Write a Python program that outputs all possible strings formed by using
 # the characters c , a , t , d , o , and g exactly once.
+def permutation_combinations():
+    characters = ['c', 'a', 'd', 'o', 'g']
+    possible_strings = []
+    for i  in characters:
+        print(i)
+
+
+
+
 
 # P-1.30 Write a Python program that can take a positive integer greater than 2 as
 # input and write out the number of times one must repeatedly divide this
@@ -44,4 +53,4 @@
 # P-1.36 Write a Python program that inputs a list of words, separated by white-
 # space, and outputs how many times each word appears in the list. You
 # need not worry about efﬁciency at this point, however, as this topic is
-# something that will be addressed later in this book.
+# something that will be addressed later in this book
