@@ -4,13 +4,18 @@
 # the characters c , a , t , d , o , and g exactly once.
 def permutation_combinations():
     characters = ['c', 'a', 'd', 'o', 'g']
-    possible_strings = []
-    for i  in characters:
-        print(i)
-
-
-
-
+    possible_strings = list()
+    for i  in characters:                   #fix first character
+        for j in characters:
+            if i != j:                      #loop through other characters while first is fixed
+                for k in characters:        #fix first and second characters
+                    if i != k and j != k:   #loop through other characters while first and second is fixed
+                        for l in characters:
+                            if i != l and j != l and k !=l:
+                                for m in characters:
+                                    if i != m and j != m and k != m and l != m:
+                                        possible_strings.append(i+j+k+l+m)                       
+    return possible_strings
 
 # P-1.30 Write a Python program that can take a positive integer greater than 2 as
 # input and write out the number of times one must repeatedly divide this
