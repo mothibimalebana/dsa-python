@@ -21,6 +21,7 @@ def permutation_combinations():
 # input and write out the number of times one must repeatedly divide this
 # number by 2 before getting a value less than 2.
 
+
 # P-1.31 Write a Python program that can “make change.” Your program should
 # take two numbers as input, one that is a monetary amount charged and the
 # other that is a monetary amount given. It should then return the number

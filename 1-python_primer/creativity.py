@@ -1,7 +1,12 @@
-# C-1.13 Write a pseudo-code description of a function that reverses a list of n
+# C-1.13 Write a function that reverses a list of n
 # integers, so that the numbers are listed in the opposite order than they
 # were before, and compare this method to an equivalent Python function
 # for doing the same thing.
+def reverse_2 (my_list):
+    reverse_list = []
+    for i in range(len(my_list), 0, -1):
+        reverse_list.append(my_list[i-1])
+    return reverse_list
 
 # C-1.14 Write a short Python function that takes a sequence of integer values and
 # determines if there is a distinct pair of numbers in the sequence whose
