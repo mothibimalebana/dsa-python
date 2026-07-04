@@ -11,6 +11,18 @@ def reverse_2 (my_list):
 # C-1.14 Write a short Python function that takes a sequence of integer values and
 # determines if there is a distinct pair of numbers in the sequence whose
 # product is odd.
+def distinct_odd_sum(num_list):
+    len_list = len(num_list)
+    distinct_pairs = []
+    for i in range(len_list):
+        for j in range(len_list):    
+            if i >= j:
+                continue
+            if (num_list[i] + num_list[j]) % 2 != 0:
+                distinct_pairs.append([num_list[i], num_list[j]])
+    return distinct_pairs
+
+print(distinct_odd_sum([1, 2, 3, 4, 5, 6, 7]))
 
 # C-1.15 Write a Python function that takes a sequence of numbers and determines
 # if all the numbers are different from each other (that is, they are distinct).
