@@ -22,10 +22,18 @@ def distinct_odd_sum(num_list):
                 distinct_pairs.append([num_list[i], num_list[j]])
     return distinct_pairs
 
-print(distinct_odd_sum([1, 2, 3, 4, 5, 6, 7]))
 
 # C-1.15 Write a Python function that takes a sequence of numbers and determines
 # if all the numbers are different from each other (that is, they are distinct).
+def distinct(num_list):
+    len_list = len(num_list)
+    for i in range(len_list):
+        for j in range(len_list):
+            if i >= j:
+                continue
+            if num_list[i] == num_list[j]:
+                return False
+    return True
 
 # C-1.16 In our implementation of the scale function (page 25), the body of the loop
 # executes the command data[j] = factor. We have discussed that numeric
