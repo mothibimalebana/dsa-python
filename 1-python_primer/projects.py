@@ -20,7 +20,16 @@ def permutation_combinations():
 # P-1.30 Write a Python program that can take a positive integer greater than 2 as
 # input and write out the number of times one must repeatedly divide this
 # number by 2 before getting a value less than 2.
+def div_by_2(number):
+    i = 0
+    qoutient = number // 2
+    while qoutient > 2:
+        i += 1
+        qoutient = qoutient // 2
+    return i
 
+print(div_by_2(100))
+    
 
 # P-1.31 Write a Python program that can “make change.” Your program should
 # take two numbers# characters literally.
