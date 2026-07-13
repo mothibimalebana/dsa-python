@@ -1,3 +1,4 @@
+import sys
 from random import randint
 # C-1.13 Write a function that reverses a list of n
 # integers, so that the numbers are listed in the opposite order than they
@@ -49,22 +50,30 @@ def shuff(data):
     i = 0
     while len(generated_list) != len(data):
         random_number = randint(0, data_len - 1)
-        print(random_number)
         if generated_list.count(random_number) == 0:
-            print(f"random number is: {random_number}")
             shuff_list[random_number] = data[i]
             i += 1
             generated_list.append(random_number)
-            print(f"added {random_number} to generated_list")
     return shuff_list
-
-
-
-print(shuff([1,2,3,4]))
 
 # C-1.21 Write a Python program that repeatedly reads lines from standard input
 # until an EOFError is raised, and then outputs those lines in reverse order
 # (a user can indicate end of input by typing ctrl-D).
+def fifo():
+    stream_list = []
+
+    print("type something")
+    while True:
+        try:
+            line = input()
+            stream_list.append(line)
+        except EOFError:
+            print("what you typed: \n")
+            for i in range(len(stream_list) - 1, 0, -1):
+                print(stream_list[i])
+            break
+
+fifo()
 
 # C-1.22 Write a short Python program that takes two arrays a and b of length n
 # storing int values, and returns the dot product of a and b. That is, it returns
