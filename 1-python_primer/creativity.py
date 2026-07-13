@@ -1,4 +1,4 @@
-import random
+from random import randint
 # C-1.13 Write a function that reverses a list of n
 # integers, so that the numbers are listed in the opposite order than they
 # were before, and compare this method to an equivalent Python function
@@ -42,13 +42,26 @@ def distinct(num_list):
 # more basic function randint(a, b) that returns a uniformly random integer
 # from a to b (including both endpoints). Using only the randint function,
 # implement your own version ofe the shuﬄe function.
-def gangum_style(data):
-    len_data = len(data)
-    data_shuffled = []
-    for i in range(len_data):
-       data_shuffled.append(data[random.randint(0, len_data -1)]) 
-    return data_shuffled
-        
+def shuff(data):
+    data_len = len(data)
+    generated_list = []
+    shuff_list = list(data)
+    i = 0
+    while len(generated_list) != len(data):
+        random_number = randint(0, data_len - 1)
+        print(random_number)
+        if generated_list.count(random_number) == 0:
+            print(f"random number is: {random_number}")
+            shuff_list[random_number] = data[i]
+            i += 1
+            generated_list.append(random_number)
+            print(f"added {random_number} to generated_list")
+    return shuff_list
+
+
+
+print(shuff([1,2,3,4]))
+
 # C-1.21 Write a Python program that repeatedly reads lines from standard input
 # until an EOFError is raised, and then outputs those lines in reverse order
 # (a user can indicate end of input by typing ctrl-D).
